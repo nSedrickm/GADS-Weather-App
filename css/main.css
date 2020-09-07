@@ -1,1 +1,71 @@
 /* weather app styles */
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url("/images/landscape-1844231.png");
+  background-position: center right;
+}
+
+header {
+  padding: 10px 50px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+#search {
+  padding: 1rem;
+  border-radius: 50px;
+}
+
+.weather_stats {
+  margin: 1rem 15rem;
+  color: white;
+  border: 2px solid white;
+}
+.weather_stats .stats_header {
+  padding: 0 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+}
+.weather_stats .stats_body {
+  padding: 0 0.5rem;
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-template-rows: auto auto;
+  grid-gap: 2px;
+}
+
+.stats_meta {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.stats_illustration {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  text-align: center;
+}
+#stats_image {
+  max-width: 100%;
+  height: auto;
+}
+
+.font-48 {
+  font-size: 10rem;
+  margin: 0;
+}
+.font-36 {
+  font-size: 3.5rem;
+  color: white;
+}
+
+.font-24 {
+  font-size: 2.5rem;
+}
+
+.font-18 {
+  font-size: 2rem;
+}
