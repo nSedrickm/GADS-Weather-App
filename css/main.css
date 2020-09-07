@@ -20,12 +20,15 @@ header {
 }
 
 .weather_stats {
-  margin: 1rem 15rem;
+  width: 80%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
   color: white;
   border: 2px solid white;
 }
 .weather_stats .stats_header {
-  padding: 0 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,8 +37,7 @@ header {
 .weather_stats .stats_body {
   padding: 0 0.5rem;
   display: grid;
-  grid-template-columns: 300px 300px;
-  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 2px;
 }
 
@@ -47,6 +49,7 @@ header {
   grid-column-start: 2;
   grid-column-end: 3;
   text-align: center;
+  justify-content: center;
 }
 #stats_image {
   max-width: 100%;
@@ -54,7 +57,7 @@ header {
 }
 
 .font-48 {
-  font-size: 10rem;
+  font-size: 4rem;
   margin: 0;
 }
 .font-36 {
