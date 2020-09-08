@@ -3,10 +3,10 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: linear-gradient(rgba(25, 61, 93, 0.2), rgba(25, 61, 93, 0.2)),
-    url("/images/planet-1700481_1920.jpg");
+  background: url("/images/planet-1700481_1920.jpg");
   background-position: fixed;
   background-size: cover;
+  font-size: 18px;
 }
 
 header {
@@ -21,13 +21,18 @@ header {
   border-radius: 50px;
   width: 300px;
   background: #fefefe;
+  font-size: 18px;
 }
 
 .weather_stats {
   width: 700px;
+  padding: 1.5rem;
   margin-right: auto;
   margin-left: auto;
   color: white;
+  background: rgba(49, 107, 164, 0.5);
+  border-radius: 25px;
+  box-shadow: 0 0.5rem 3.5rem rgba(0, 0, 0, 0.15);
 }
 .weather_stats .stats_header {
   display: flex;
