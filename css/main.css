@@ -1,4 +1,9 @@
 /* weather app styles */
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   height: 100%;
   margin: 0;
@@ -24,13 +29,42 @@ header {
   font-size: 18px;
 }
 
+form.search {
+  display: flex;
+  flex-direction: row;
+}
+form.search input[type="search"] {
+  border: none;
+  width: 300px;
+  padding: 25px;
+  height: 60px;
+}
+
+form.search input:focus {
+  outline: none;
+}
+
+form.search button {
+  padding: 25px;
+  border: none;
+  height: 60px;
+  width: 60px;
+  background: #2196f3;
+  color: white;
+  cursor: pointer;
+}
+
+form.search button:hover {
+  background: #0b7dda;
+}
+
 .weather_stats {
   width: 700px;
   padding: 1.5rem;
   margin-right: auto;
   margin-left: auto;
   color: white;
-  background: rgba(49, 107, 164, 0.5);
+  background: rgba(49, 107, 164, 0.7);
   border-radius: 25px;
   box-shadow: 0 0.5rem 3.5rem rgba(0, 0, 0, 0.15);
 }
