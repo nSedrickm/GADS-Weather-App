@@ -3,7 +3,10 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: rgb(7, 37, 64);
+  background: linear-gradient(rgba(25, 61, 93, 0.2), rgba(25, 61, 93, 0.2)),
+    url("/images/planet-1700481_1920.jpg");
+  background-position: fixed;
+  background-size: cover;
 }
 
 header {
@@ -17,8 +20,7 @@ header {
   padding: 1rem;
   border-radius: 50px;
   width: 300px;
-  background: rgb(25, 61, 93);
-  color: white;
+  background: #fefefe;
 }
 
 .weather_stats {
