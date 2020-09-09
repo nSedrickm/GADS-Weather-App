@@ -18,17 +18,18 @@
 
     <section class="weather_stats">
         <div class="stats_header">
-            <h2 class="font-24">Cameroon</h2>
-            <h3>Bright sunny Day</h3>
-
+            <h2 class="font-24"><span id="location_name">Cameroon</span></h2>
         </div>
 
         <div class="stats_body">
             <div class="stats_meta">
-                <p class="">Monday 7 Sept 2020</p>
-                <h2>60&#8451;</h2>
+                <p id="date">Monday 7 Sept 2020</p>
+                <p id="time">11:00</p>
+                <h3><span id="description">Bright, sunny day</span></h3>
+                <h2 class="font-48"><span id="temp">60</span>&#8451;</h2>
                 <p>Min <span id="min_temp">60</span>&#8451; , Max <span id="max_temp">105</span>&#8451;</p>
-                <p class="">Rainfall <span id="rainfall_perc">25%</span></p>
+                <p>Feels like <span id="feels_like">70&#8451;</span></p>
+
             </div>
 
             <div class+="stats_illustration">
@@ -37,13 +38,40 @@
             <div class="stats_meta_2">
                 <dl>
                     <div class="stats_details">
+                        <dt>cloud cover</dt>
+                        <dd><span id="cloud_cover">25</span> %</dd>
+                    </div>
+                    <div class="stats_details">
                         <dt>Wind</dt>
-                        <dd>Black hot drink</dd>
+                        <dd><span id="wind_speed">15</span> km/h</dd>
+                    </div>
+
+                    <div class="stats_details">
+                        <dt>Wind gusts</dt>
+                        <dd><span id="wind_gusts">7</span> km/h</dd>
                     </div>
 
                     <div class="stats_details">
                         <dt>Humidity</dt>
-                        <dd>Black hot drink</dd>
+                        <dd><span id="humidity">75</span> %</dd>
+                    </div>
+                    <div class="stats_details">
+                        <dt>Pressure</dt>
+                        <dd><span id="pressure">750</span> mm/Hg</dd>
+                    </div>
+
+                    <div class="stats_details">
+                        <dt>Rainfall</dt>
+                        <dd><span id="rainfall_perc">25</span> %</dd>
+                    </div>
+
+                    <div class="stats_details">
+                        <dt>Dew point</dt>
+                        <dd><span id="dew_point">25</span>&#8451;</dd>
+                    </div>
+                    <div class="stats_details">
+                        <dt>Visibility</dt>
+                        <dd><span id="Visibility">25</span> km</dd>
                     </div>
                 </dl>
             </div>
