@@ -25,7 +25,6 @@ header {
   padding: 1rem;
   border-radius: 50px;
   width: 300px;
-  background: #fefefe;
   font-size: 18px;
 }
 
@@ -36,22 +35,39 @@ form.search {
 form.search input[type="search"] {
   border: none;
   width: 300px;
-  padding: 25px;
+  padding: 20px;
   height: 60px;
+  font-size: 18px;
+  background: #fefefe;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50rem 0 0 50rem;
 }
 
-form.search input:focus {
+form.search input:focus,
+form.search button:focus {
+  background: rgba(95, 159, 213, 0.5);
+  color: #fefefe;
   outline: none;
 }
-
+form.search input[type="search"]:focus::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: transparent;
+}
+form.search input[type="search"]:focus::-moz-placeholder {
+  /* Firefox 19+ */
+  color: transparent;
+}
 form.search button {
-  padding: 25px;
+  font-size: 18px;
+  padding: 20px;
   border: none;
   height: 60px;
   width: 60px;
   background: #2196f3;
   color: white;
   cursor: pointer;
+  border-radius: 0 50rem 50rem 0;
 }
 
 form.search button:hover {
