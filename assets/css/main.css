@@ -1,0 +1,141 @@
+/* weather app styles */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: url("/assets/images/planet-1700481_1920.jpg");
+  background-position: fixed;
+  background-size: cover;
+  font-size: 18px;
+}
+
+header {
+  padding: 10px 50px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+#search {
+  padding: 1rem;
+  border-radius: 50px;
+  width: 300px;
+  font-size: 18px;
+}
+
+form.search {
+  display: flex;
+  flex-direction: row;
+}
+form.search input[type="search"] {
+  border: none;
+  width: 300px;
+  padding: 20px;
+  height: 60px;
+  font-size: 18px;
+  background: #fefefe;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50rem 0 0 50rem;
+}
+
+form.search input:focus,
+form.search button:focus {
+  background: rgba(95, 159, 213, 0.5);
+  color: #fefefe;
+  outline: none;
+}
+form.search input[type="search"]:focus::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: transparent;
+}
+form.search input[type="search"]:focus::-moz-placeholder {
+  /* Firefox 19+ */
+  color: transparent;
+}
+form.search button {
+  font-size: 18px;
+  padding: 20px;
+  border: none;
+  height: 60px;
+  width: 60px;
+  background: #2196f3;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 50rem 50rem 0;
+}
+
+form.search button:hover {
+  background: #0b7dda;
+}
+
+.weather_stats {
+  width: 992px;
+  padding: 1.5rem;
+  margin: 0 auto;
+  color: white;
+  background: rgba(49, 107, 164, 0.7);
+  border-radius: 25px;
+  box-shadow: 0 0.5rem 3.5rem rgba(0, 0, 0, 0.15);
+}
+.stats_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.stats_body {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-gap: 0;
+  text-align: center;
+}
+
+.stats_meta {
+  text-align: left;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.stats_illustration {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.stats_meta_2 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.stats_details {
+  border-bottom: 1px solid white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+#stats_image {
+  max-width: 100%;
+  height: auto;
+}
+
+.font-48 {
+  font-size: 3.5rem;
+  margin: 0;
+}
+.font-36 {
+  font-size: 3.5rem;
+  color: white;
+}
+
+.font-24 {
+  font-size: 2.5rem;
+}
+
+.font-18 {
+  font-size: 2rem;
+}

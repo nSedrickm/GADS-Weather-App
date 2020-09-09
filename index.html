@@ -3,15 +3,15 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Weather</title>
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 
 <body>
     <header>
         <h1 class="font-36">Weather</h1>
 
-        <form name="search_form" class="search" action="">
-            <input type="search" placeholder="Search" name="search">
+        <form id="search_form" class="search" action="">
+            <input type="search" placeholder="Search" id="search_field">
             <button type="submit"><i class="fa fa-search"></i></button>
         </form>
     </header>
@@ -19,27 +19,37 @@
     <section class="weather_stats">
         <div class="stats_header">
             <h2 class="font-24">Cameroon</h2>
+            <h3>Bright sunny Day</h3>
+
         </div>
 
         <div class="stats_body">
             <div class="stats_meta">
                 <p class="">Monday 7 Sept 2020</p>
-                <p class="font-48">60&#8451;</p>
-                <p class="">raining</p>
+                <h2>60&#8451;</h2>
+                <p>Min <span id="min_temp">60</span>&#8451; , Max <span id="max_temp">105</span>&#8451;</p>
+                <p class="">Rainfall <span id="rainfall_perc">25%</span></p>
             </div>
 
             <div class+="stats_illustration">
-                <img id="stats_image" src="/images/daytime/sun_minimal_cloud.png">
+                <img id="stats_image" src="/assets/images/daytime/sun_minimal_cloud.png">
             </div>
-
             <div class="stats_meta_2">
-                <p class="">Wind speed</p>
-                <p class="">Humidity</p>
-                <p class="">Rainfall</p>
+                <dl>
+                    <div class="stats_details">
+                        <dt>Wind</dt>
+                        <dd>Black hot drink</dd>
+                    </div>
+
+                    <div class="stats_details">
+                        <dt>Humidity</dt>
+                        <dd>Black hot drink</dd>
+                    </div>
+                </dl>
             </div>
         </div>
     </section>
 </body>
-<script src="/js/main.js"></script>
+<script src="/assets/js/main.js"></script>
 
 </html>
