@@ -76,7 +76,7 @@ form.search button:hover {
 
 .weather_stats {
   width: 992px;
-  padding: 1.5rem;
+  padding: 1rem;
   margin: 25px auto 100px auto;
   color: white;
   background: rgba(49, 107, 164, 0.7);
@@ -93,11 +93,9 @@ form.search button:hover {
   grid-template-rows: auto auto auto;
   grid-template-columns: 1fr 1.5fr 1fr;
   grid-gap: 0;
-  text-align: center;
 }
 
 .stats_meta {
-  text-align: left;
   grid-column-start: 1;
   grid-column-end: 2;
 }
