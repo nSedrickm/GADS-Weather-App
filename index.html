@@ -18,7 +18,7 @@
 
     <section class="weather_stats">
         <div class="stats_header">
-            <h2 class="font-24"><span id="location_name">Cameroon</span></h2>
+            <h2 class="font-24"><span id="location_name">Cameroon</span>, <span id="location_code"></span></h2>
             <h2>Current weather</h2>
         </div>
 
@@ -34,10 +34,14 @@
             </div>
 
             <div class+="stats_illustration">
-                <img id="stats_image" src="/assets/images/daytime/rainfall.png">
+                <img id="stats_image" src="/assets/images/daytime/sun.png">
             </div>
             <div class="stats_meta_2">
                 <dl>
+                    <div class="stats_details">
+                        <dt>Weather Condition</dt>
+                        <dd><span id="weather_cond">Bright</span></dd>
+                    </div>
                     <div class="stats_details">
                         <dt>Cloudiness</dt>
                         <dd><span id="cloudiness">25</span> %</dd>
@@ -59,11 +63,6 @@
                     <div class="stats_details">
                         <dt>Pressure</dt>
                         <dd><span id="pressure">750</span> mm/Hg</dd>
-                    </div>
-
-                    <div class="stats_details">
-                        <dt>Weather Condition</dt>
-                        <dd><span id="weather_cond">Bright</span></dd>
                     </div>
                     <div class="stats_details">
                         <dt>Visibility</dt>
