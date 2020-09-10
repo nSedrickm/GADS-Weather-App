@@ -1,6 +1,11 @@
 // weather app javascript
-window.addEventListener("load", function () {
 
+//register service-worker
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+//load handlers
+window.addEventListener("load", function () {
   //mapping stats containers
   var locationName = document.getElementById("location_name");
   var locationCode = document.getElementById("location_code");
@@ -22,20 +27,24 @@ window.addEventListener("load", function () {
   var visibility = document.getElementById("visibility");
   var searchForm = document.getElementById("search_form");
 
-
   function getForecast(location) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
         let response = JSON.parse(this.responseText);
-        console.log(response);
         localStorage.setItem(location, JSON.stringify(response));
         showForecast(response);
       }
     };
-    xhttp.open("GET", `https://api.openweathermap.org/data/2.5/weather?q=` + location + `&units=metric&APPID=dd8fd220b843b73b78411eeae3a562eb`, true);
+    xhttp.open(
+      "GET",
+      `https://api.openweathermap.org/data/2.5/weather?q=` +
+        location +
+        `&units=metric&APPID=dd8fd220b843b73b78411eeae3a562eb`,
+      true
+    );
     xhttp.send();
-  };
+  }
 
   function showForecast(statistics) {
     locationName.innerHTML = statistics.name;
@@ -47,8 +56,11 @@ window.addEventListener("load", function () {
     minTemp.innerHTML = statistics.main.temp_min;
     maxTemp.innerHTML = statistics.main.temp_max;
     feelsLike.innerHTML = statistics.main.feels_like;
-    iconUrl = "http://openweathermap.org/img/wn/" + statistics.weather[0].icon + "@2x.png";
-    statsImage.setAttribute("src", iconUrl)
+    iconUrl =
+      "http://openweathermap.org/img/wn/" +
+      statistics.weather[0].icon +
+      "@2x.png";
+    statsImage.setAttribute("src", iconUrl);
     cloudiness.innerHTML = statistics.clouds.all;
     windSpeed.innerHTML = statistics.wind.speed;
     windDir.innerHTML = statistics.wind.deg;
@@ -61,22 +73,19 @@ window.addEventListener("load", function () {
   function searchForecast(event) {
     event.preventDefault();
     let searchLocationName = document.getElementById("search_field").value;
-    console.log(searchLocationName)
+    console.log(searchLocationName);
     let fetchedStats = JSON.parse(localStorage.getItem(searchLocationName));
-    console.log("logginfs", fetchedStats)
+    console.log("logginfs", fetchedStats);
     if (fetchedStats == null) {
       getForecast(searchLocationName);
-    }
-    else if (fetchedStats.name == searchLocationName) {
+    } else if (fetchedStats.name == searchLocationName) {
       showForecast(fetchedStats);
-    }
-    else {
+    } else {
       getForecast(searchLocationName);
     }
   }
 
   //default gets forecast for Bamenda Cameroon
   getForecast("Bamenda");
-  searchForm.addEventListener('submit', searchForecast);
-
+  searchForm.addEventListener("submit", searchForecast);
 });
