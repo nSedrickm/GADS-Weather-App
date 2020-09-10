@@ -35,8 +35,8 @@ form.search {
 form.search input[type="search"] {
   border: none;
   width: 300px;
-  padding: 20px;
-  height: 60px;
+  padding: 15px;
+  height: 50px;
   font-size: 18px;
   background: #fefefe;
   align-items: center;
@@ -60,10 +60,10 @@ form.search input[type="search"]:focus::-moz-placeholder {
 }
 form.search button {
   font-size: 18px;
-  padding: 20px;
+  padding: 15px;
   border: none;
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   background: #2196f3;
   color: white;
   cursor: pointer;
