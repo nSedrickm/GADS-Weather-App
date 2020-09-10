@@ -145,7 +145,7 @@ form.search button:hover {
   }
   .weather_stats {
     max-width: 95%;
-    margin: auto;
+    margin: 2.5rem auto;
     padding: 1rem;
     text-align: center;
   }
@@ -170,5 +170,8 @@ form.search button:hover {
   .stats_image_box {
     width: auto;
     height: auto;
+  }
+  .font-48 {
+    font-size: 2.5rem;
   }
 }
