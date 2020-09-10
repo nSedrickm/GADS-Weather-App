@@ -33,7 +33,7 @@ window.addEventListener("load", function () {
         showForecast(response);
       }
     };
-    xhttp.open("GET", `https://api.openweathermap.org/data/2.5/weather?q=` + location + `&APPID=dd8fd220b843b73b78411eeae3a562eb`, true);
+    xhttp.open("GET", `https://api.openweathermap.org/data/2.5/weather?q=` + location + `&units=metric&APPID=dd8fd220b843b73b78411eeae3a562eb`, true);
     xhttp.send();
   };
 
