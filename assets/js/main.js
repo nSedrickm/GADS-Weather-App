@@ -1,8 +1,7 @@
 // weather app javascript
 window.addEventListener("load", function () {
 
-  //mapping stats containers 
-
+  //mapping stats containers
   var locationName = document.getElementById("location_name");
   var locationCode = document.getElementById("location_code");
   var date = document.getElementById("date");
@@ -13,6 +12,7 @@ window.addEventListener("load", function () {
   var maxTemp = document.getElementById("max_temp");
   var feelsLike = document.getElementById("feels_like");
   var statsImage = document.getElementById("stats_image");
+  var iconUrl;
   var cloudiness = document.getElementById("cloudiness");
   var windSpeed = document.getElementById("wind_speed");
   var windDir = document.getElementById("wind_dir");
@@ -47,6 +47,9 @@ window.addEventListener("load", function () {
     minTemp.innerHTML = statistics.main.temp_min;
     maxTemp.innerHTML = statistics.main.temp_max;
     feelsLike.innerHTML = statistics.main.feels_like;
+    iconUrl = "http://openweathermap.org/img/wn/" + statistics.weather[0].icon + "@2x.png";
+    console.log(iconUrl);
+    statsImage.setAttribute("src", iconUrl)
     cloudiness.innerHTML = statistics.clouds.all;
     windSpeed.innerHTML = statistics.wind.speed;
     windDir.innerHTML = statistics.wind.deg;
