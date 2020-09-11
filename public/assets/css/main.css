@@ -90,7 +90,7 @@ form.search button:hover {
 }
 .stats_body {
   display: grid;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto;
   grid-template-columns: 1fr 1fr 1.5fr;
   grid-gap: 0;
 }
