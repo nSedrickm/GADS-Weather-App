@@ -2,8 +2,21 @@
 
 //register service-worker
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("service-worker.js");
+  navigator.serviceWorker.register("service-worker.js")
+    .then(serviceWorker => {
+      console.log("Service Worker registered: ", serviceWorker);
+    })
+    .catch(error => {
+      console.error("Error registering the Service Worker: ", error);
+    });
 }
+navigator.serviceWorker.onmessage = event => {
+  const message = JSON.parse(event.data);
+  if (message && message.type.includes("/data/2.5/")) {
+    console.log("New Weather location data", message.data)
+    //showForecast(message.data)
+  }
+};
 //load handlers
 window.addEventListener("load", function () {
   //mapping stats containers
@@ -39,8 +52,8 @@ window.addEventListener("load", function () {
     xhttp.open(
       "GET",
       `https://api.openweathermap.org/data/2.5/weather?q=` +
-        location +
-        `&units=metric&APPID=dd8fd220b843b73b78411eeae3a562eb`,
+      location +
+      `&units=metric&APPID=dd8fd220b843b73b78411eeae3a562eb`,
       true
     );
     xhttp.send();
@@ -86,6 +99,5 @@ window.addEventListener("load", function () {
   }
 
   //default gets forecast for Bamenda Cameroon
-  getForecast("Bamenda");
   searchForm.addEventListener("submit", searchForecast);
 });
