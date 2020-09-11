@@ -57,7 +57,7 @@ window.addEventListener("load", function () {
     maxTemp.innerHTML = statistics.main.temp_max;
     feelsLike.innerHTML = statistics.main.feels_like;
     iconUrl =
-      "http://openweathermap.org/img/wn/" +
+      "https://openweathermap.org/img/wn/" +
       statistics.weather[0].icon +
       "@2x.png";
     statsImage.setAttribute("src", iconUrl);
