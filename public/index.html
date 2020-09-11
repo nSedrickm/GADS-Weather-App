@@ -6,8 +6,13 @@
     <meta name="description" content="WeatherMe weather forecast app">
     <meta name="keywords" content="HTML, CSS, JavaScript, Weather , Forecast">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#3371aa" />
+    <meta name="theme-color" content="#3371aa" />
     <title>WeatherMe</title>
-    <link rel="icon" href="/assets/images/icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/apple-icon-180x180.png" />
+
+    <link rel="mask-icon" href="/assets/icon/android-icon-192x192.png" color="#3371aa" />
     <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="/assets/css/main.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
@@ -16,7 +21,7 @@
 
 <body>
     <header>
-        <h1 class="font-24"><img src="/assets/images/icon.png" alt="cloud logo"> WeatherMe</h1>
+        <h1 class="font-24"><img src="/assets/images/icon.png" alt="cloud logo"> meWeather</h1>
         <form id="search_form" class="search" action="">
             <label for="search_field"></label>
             <input type="search" placeholder="Search" id="search_field" aria-label="search field">
@@ -40,7 +45,7 @@
             </div>
             <div class="stats_meta_1">
                 <div class="stats_image_box">
-                    <img id="stats_image" src="/assets/images/10d@2x.png" alt="weather icon">
+                    <img id="stats_image" src="/assets/icon/favicon-512x512.png" alt="weather icon">
                 </div>
                 <p>Feels like <span id="feels_like">70</span>&#8451;</p>
             </div>
